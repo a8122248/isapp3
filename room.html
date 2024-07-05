@@ -31,7 +31,7 @@
 
         async function newComment() {
             var name = document.getElementById('comment').value;
-            var sql = `insert into Comments (roomId, userId, comment, time) values(${roomId}, '${me.id}','${name}', now());`;
+            var sql = `insert into Comments (roomId, userId, comment, time) values(${roomId}, '${me.id}','${comment}', now());`;
             var commentId = await osql.connectInsert(sql);
             console.log(commentId);
 
